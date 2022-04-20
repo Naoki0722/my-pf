@@ -19,7 +19,7 @@ const SkillDetail: VFC<Props> = ({ language, icon, children, width }) => {
       <div className='relative mb-4'>
         <FontAwesomeIcon
           icon={icon}
-          className='text-8xl text-green-300 block mx-auto'
+          className='text-8xl text-[#D3DFC2] block mx-auto'
         ></FontAwesomeIcon>
         <h3 className='font-bold tracking-widest absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
           {language}

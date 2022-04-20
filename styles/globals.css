@@ -48,7 +48,7 @@ a {
 }
 
 .first-view-sp {
-  height: 45vh;
+  height: 20rem;
 }
 
 .first-view-h2 {
@@ -79,7 +79,7 @@ a {
 }
 
 .hamburger {
-  position: fixed;
+  position: absolute;
   right: 0;
   width: 75px;
   height: 55px;

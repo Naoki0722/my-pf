@@ -3,9 +3,9 @@ import Image from 'next/image'
 
 const FirstView: NextPage = () => {
   return (
-    <div className='pt-36'>
+    <div className='pt-8 sm:pt-36'>
       <div className='relative first-view-sp sm:first-view'>
-        <h2 className='absolute bottom-0 sm:top-1/3 left-5 sm:left-0 z-10 text-3xl sm:text-5xl leading-relaxed sm:leading-normal'>
+        <h2 className='absolute top-64 sm:top-1/3 left-5 sm:left-0 z-10 text-3xl sm:text-5xl leading-relaxed sm:leading-normal'>
           “地方創生”
           <br className='sm:hidden' />
           ―私を動かすキーワード

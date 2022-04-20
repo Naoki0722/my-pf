@@ -74,7 +74,7 @@ const History: NextPage = () => {
                   <br />
                   [内容]システム導入支援・開発者の支援(リリース対応/データベース周辺作業)
                 </p>
-                <p className='text-green-400 pt-2'>
+                <p className='text-[#68B7A1] pt-2'>
                   創業のタイミングで入社
                   <br />
                   ここで未経験でシステム関係の仕事に関わることに。
@@ -113,7 +113,7 @@ const History: NextPage = () => {
               <p className='w-20 sm:w-44 sm:tracking-[0.2rem]'>2021.5</p>
               <div className='w-56 sm:w-full'>
                 <p>受託開発の会社で仕事　二足の草鞋でエンジニア業務をこなす</p>
-                <p className='text-green-400 pt-2'>
+                <p className='text-[#68B7A1] pt-2'>
                   2016年に少し経験済みですが、ここで再度エンジニアとしての人生がスタート。
                   <br />
                   地方創生という観点で関わっていきたいという想いと、

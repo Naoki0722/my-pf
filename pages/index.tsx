@@ -15,7 +15,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Hamburger></Hamburger>
-      <div className='fixed w-full z-20 bg-header sm:block'>
+      <div className='sm:fixed w-full z-20 bg-header sm:block'>
         <Header></Header>
       </div>
       <div className='sm:mx-24'>

@@ -35,7 +35,7 @@ const Contact: NextPage = () => {
             rows={10}
             className='border w-full p-2'
           ></textarea>
-          <button className='block border bg-green-300 px-2 py-2 rounded mx-auto mt-4'>
+          <button className='block border bg-[#D3DFC2] px-2 py-2 rounded mx-auto mt-4'>
             送信する
           </button>
         </div>
