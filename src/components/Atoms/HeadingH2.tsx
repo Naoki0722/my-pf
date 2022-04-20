@@ -5,7 +5,7 @@ type Props = {
 
 const HeadingH2: React.VFC<Props> = ({ title, subTitle }) => {
   return (
-    <div className='text-center py-16'>
+    <div className='text-center py-12 sm:py-16'>
       <h2 className='text-4xl mb-4 tracking-widest'>{title}</h2>
       <h3>{subTitle}</h3>
     </div>

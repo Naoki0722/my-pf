@@ -3,8 +3,8 @@ import NavLink from '../Atoms/NavLink'
 
 const Footer: NextPage = () => {
   return (
-    <footer className='bg-black text-white py-16'>
-      <nav className='flex justify-center items-end tracking-[.2em]'>
+    <footer className='bg-black text-white pt-16 pb-4 sm:py-16'>
+      <nav className='hidden sm:flex justify-center items-end tracking-[.2em]'>
         <NavLink main='ABOUT' link='#profile' />
         <NavLink main='HISTORY' link='#history' />
         <NavLink main='SKILL' link='#skill' />

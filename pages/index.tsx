@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Hamburger from '../src/components/Molecules/Hamburger'
 import Contact from '../src/components/Organisms/Contact'
 import FirstView from '../src/components/Organisms/FirstView'
 import Footer from '../src/components/Organisms/Footer'
@@ -13,10 +14,11 @@ import Skill from '../src/components/Organisms/Skill'
 const Home: NextPage = () => {
   return (
     <>
-      <div className='fixed w-full z-20 bg-header hidden sm:block'>
+      <Hamburger></Hamburger>
+      <div className='fixed w-full z-20 bg-header sm:block'>
         <Header></Header>
       </div>
-      <div className='mx-24'>
+      <div className='sm:mx-24'>
         <FirstView></FirstView>
         <Profile></Profile>
       </div>

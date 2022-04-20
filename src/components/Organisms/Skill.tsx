@@ -6,7 +6,7 @@ import SkillList3 from '../Molecules/SkillList3'
 
 const Skill: NextPage = () => {
   return (
-    <div id='skill' className='skill-area px-24'>
+    <div id='skill' className='skill-area px-5 sm:px-24'>
       <HeadingH2 title='SKILLS' subTitle='できること' />
       <SkillList />
       <SkillList2 />
