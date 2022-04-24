@@ -4,7 +4,7 @@ import NavLink from '../Atoms/NavLink'
 
 const Navigation: NextPage = () => {
   return (
-    <nav className='hidden lg:flex justify-around items-end tracking-[.2em]'>
+    <nav className='hidden justify-around items-end tracking-[.2em] lg:flex'>
       <NavLink main='ABOUT' sub='プロフィール' fontSize='text-2xl' link='#profile' />
       <NavLink main='HISTORY' sub='経歴' fontSize='text-2xl' link='#history' />
       <NavLink main='SKILL' sub='できること' fontSize='text-2xl' link='#skill' />

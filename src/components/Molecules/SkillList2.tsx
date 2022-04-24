@@ -10,7 +10,7 @@ const SkillList2: NextPage = () => {
   return (
     <div className='relative mb-24'>
       <Category category='Infrastructure' />
-      <div className='flex flex-wrap justify-between bg-white rounded-[4.5rem] sm:rounded-2xl sm:w-11/12 sm:mx-auto'>
+      <div className='flex flex-wrap justify-between bg-white rounded-[4.5rem] sm:mx-auto sm:w-11/12 sm:rounded-2xl'>
         <SkillDetail language='Docker' icon={faDocker} width='w-2/5 lg:w-1/4'>
           {`経験年数 1.5年\n本業、副業含めサーバーサイド側の言語はDockerで開発。 AWSではECS、GCPではAppEngineやCloudRunを利用し、Dockerに対する知識を日々得ております。`}
         </SkillDetail>

@@ -9,7 +9,7 @@ const SkillList3: NextPage = () => {
   return (
     <div className='relative mb-24'>
       <Category category='And more' />
-      <div className='flex flex-wrap justify-between bg-white rounded-[4.5rem] sm:rounded-2xl sm:w-11/12 sm:mx-auto'>
+      <div className='flex flex-wrap justify-between bg-white rounded-[4.5rem] sm:mx-auto sm:w-11/12 sm:rounded-2xl'>
         <SkillDetail language='Github' icon={faGithub} width='w-2/5 lg:w-1/4'>
           {`経験年数 2.5年\n2016年に勤務した自社開発の会社の時から利用。開発者のリリーサーとしてGithubの管理やデプロイ等の対応経験あり。一部、クラウド環境への自動デプロイや作業効率化としてGithub Actionsの作成も。`}
         </SkillDetail>
