@@ -4,11 +4,11 @@ import HeadingH2 from '../Atoms/HeadingH2'
 const Contact: NextPage = () => {
   return (
     <div id='contact' className='contact-area pt-24 pb-16 relative'>
-      <div className='absolute top-2 left-1/2 transform -translate-x-1/2'>
+      <div className='absolute top-7 sm:top-2 left-1/2 transform -translate-x-1/2'>
         <HeadingH2 title='CONTACT' subTitle='お問い合わせ' />
       </div>
-      <div className='contact-bg w-4/5 mx-auto flex justify-center'>
-        <div className='pt-24 pb-8 w-1/3'>
+      <div className='contact-bg w-4/5 2xl:w-3/5 mx-auto flex justify-center'>
+        <div className='pt-24 pb-8 sm:w-8/12 lg:w-1/2'>
           <label htmlFor='name' className='block'>
             お名前
           </label>
@@ -35,7 +35,7 @@ const Contact: NextPage = () => {
             rows={10}
             className='border w-full p-2'
           ></textarea>
-          <button className='block border bg-green-300 px-2 py-2 rounded mx-auto mt-4'>
+          <button className='block border bg-[#D3DFC2] px-2 py-2 rounded mx-auto mt-4'>
             送信する
           </button>
         </div>

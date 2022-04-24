@@ -33,6 +33,12 @@ a {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
+.transparent-background {
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+}
+
 .main {
   padding-top: 180px;
 }
@@ -66,4 +72,88 @@ a {
 .contact-area {
   background-image: url('../public/images/contact.jpg');
   background-size: cover;
+}
+
+.hamburger {
+  position: absolute;
+  right: 0;
+  width: 75px;
+  height: 55px;
+  z-index: 101;
+}
+
+.hamburger span {
+  display: inline-block;
+  transition: all 0.4s; /*アニメーションの設定*/
+  position: absolute;
+  right: 15px;
+  height: 3px;
+  border-radius: 2px;
+  background: gray;
+  width: 45%;
+}
+
+.hamburger span:nth-of-type(1) {
+  top: 15px;
+}
+
+.hamburger span:nth-of-type(2) {
+  top: 23px;
+}
+
+.hamburger span:nth-of-type(3) {
+  top: 31px;
+}
+
+.hamburger span:nth-of-type(4) {
+  top: 40px;
+}
+
+.hamburger.active span:nth-of-type(1) {
+  top: 15px;
+  left: 20px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 45%;
+}
+
+.hamburger.active span:nth-of-type(2) {
+  opacity: 0; /*真ん中の線は透過*/
+}
+
+.hamburger.active span:nth-of-type(4) {
+  opacity: 0; /*真ん中の線は透過*/
+}
+
+.hamburger.active span:nth-of-type(3) {
+  top: 27px;
+  left: 21px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 45%;
+}
+
+.hamburger-menu {
+  background-color: #d3dfc2;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  width: 70%;
+  height: 0;
+  opacity: 0;
+  padding-top: 80px;
+  transition: all 0.5s;
+  z-index: -100;
+}
+
+.hamburger-menu.active {
+  height: 100vh;
+  opacity: 1;
+  z-index: 100;
+}
+
+.hamburger-menu .footer {
+  position: fixed;
+  bottom: 0;
+  height: 150px;
+  width: 70%;
+  background-color: black;
 }
