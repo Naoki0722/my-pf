@@ -15,7 +15,7 @@ const Hamburger: NextPage = () => {
   }
 
   return (
-    <div className='sm:hidden'>
+    <div className='lg:hidden'>
       <div className={openMenu ? 'hamburger active' : 'hamburger'} onClick={activeHamburger}>
         <span></span>
         <span></span>

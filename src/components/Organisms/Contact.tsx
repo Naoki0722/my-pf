@@ -7,8 +7,8 @@ const Contact: NextPage = () => {
       <div className='absolute top-7 sm:top-2 left-1/2 transform -translate-x-1/2'>
         <HeadingH2 title='CONTACT' subTitle='お問い合わせ' />
       </div>
-      <div className='contact-bg w-4/5 mx-auto flex justify-center'>
-        <div className='pt-24 pb-8 sm:w-1/3'>
+      <div className='contact-bg w-4/5 2xl:w-3/5 mx-auto flex justify-center'>
+        <div className='pt-24 pb-8 sm:w-8/12 lg:w-1/2'>
           <label htmlFor='name' className='block'>
             お名前
           </label>

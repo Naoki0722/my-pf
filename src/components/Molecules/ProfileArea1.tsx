@@ -3,20 +3,20 @@ import Image from 'next/image'
 
 const ProfileArea1: NextPage = () => {
   return (
-    <div className='relative mb-8 profile-area'>
-      <div className='px-4 transparent-background absolute z-10 w-11/12 sm:w-3/5 sm:ml-8 top-72 sm:top-0 left-1/2 sm:left-1/3 sm:text-lg'>
+    <div className='relative mb-8 h-[700px]'>
+      <div className='px-4 transparent-background absolute z-10 w-11/12 lg:w-3/5 lg:ml-8 top-72 lg:top-0 left-1/2 lg:left-1/3 sm:text-lg'>
         <div className='sm:flex items-center tracking-[.25em] sm:mb-4'>
           <h3 className='text-3xl mr-4'>松﨑 直樹</h3>
           <p>NAOKI MATSUZAKI</p>
         </div>
-        <p className='border-b-2 border-gray-500 pb-2 mb-8'>エンジニア</p>
+        <p className='border-b-2 border-gray-500 pb-2 sm:mb-2 lg:mb-8'>エンジニア</p>
         <div className='profile-text'>
-          <p className='my-4 sm:leading-relaxed'>
+          <p className='my-4 leading-relaxed text-[15px] sm:text-base'>
             仕事をきっかけに生まれ育った鹿児島を離れ、現在は福岡に在住。
             <br />
             面白いこと・人がやらなさそうなことに強く惹かれる性格で、”普通”よりも”人と違うこと”が好き。
           </p>
-          <p className='mt-8 sm:mt-12 mb-8 sm:leading-relaxed'>
+          <p className='mt-8 sm:mt-12 mb-8 leading-relaxed text-[15px] sm:text-base'>
             大学時代はサイクリング部の仲間と自転車での日本縦断を成し遂げました。
             <br />
             今まで培ってきた根性と粘り強さには自信があります。

@@ -15,7 +15,7 @@ const SkillDetail: VFC<Props> = ({ language, icon, children, width }) => {
   })
 
   return (
-    <div className={`mx-4 sm:mx-12 mt-16 mb-8 ${width}`}>
+    <div className={`mx-4 sm:ml-8 lg:mx-[4%] mt-8 sm:mt-16 mb-8 sm:mb-16 ${width}`}>
       <div className='relative mb-4'>
         <FontAwesomeIcon
           icon={icon}
@@ -25,7 +25,7 @@ const SkillDetail: VFC<Props> = ({ language, icon, children, width }) => {
           {language}
         </h3>
       </div>
-      <p className='text-sm sm:text-lg sm:leading-7'>{texts}</p>
+      <p className='text-xs sm:text-base lg:text-lg leading-relaxed sm:leading-7'>{texts}</p>
     </div>
   )
 }
