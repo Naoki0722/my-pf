@@ -9,11 +9,12 @@ import Profile from '../src/components/Organisms/Profile'
 import Project from '../src/components/Organisms/Project'
 import Report from '../src/components/Organisms/Report'
 import Skill from '../src/components/Organisms/Skill'
-// import Head from 'next/head'
+import ReturnButton from '../src/components/Molecules/ReturnButton'
 
 const Home: NextPage = () => {
   return (
     <>
+      <ReturnButton />
       <Hamburger></Hamburger>
       <div className='z-20 w-full lg:block lg:fixed bg-header'>
         <Header></Header>
