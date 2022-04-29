@@ -24,7 +24,7 @@ const Hamburger: NextPage = () => {
       </div>
       <div className={openMenu ? 'hamburger-menu active' : 'hamburger-menu'}>
         <p className='p-4 text-3xl font-bold tracking-[.25em]'>NAOKI MATSUZAKI</p>
-        <nav className='menu'>
+        <nav>
           <h2 className='py-3 text-center border-t border-black'>
             <AnchorLink
               href='#profile'

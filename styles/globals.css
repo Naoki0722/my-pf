@@ -76,6 +76,7 @@ a {
 .contact-area {
   background-image: url('../public/images/contact.jpg');
   background-size: cover;
+  background-position: center;
 }
 
 .hamburger {

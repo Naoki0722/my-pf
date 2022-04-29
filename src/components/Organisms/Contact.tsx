@@ -6,12 +6,11 @@ const Contact: NextPage = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [content, setContent] = useState('')
-  const [category, setCategory] = useState('0')
-  const validEmail = () => {
-    // email.match()
-  }
+  const [category, setCategory] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
   const sendMail = async (event: any) => {
     event.preventDefault()
+    setIsLoading((prevState) => !prevState)
     try {
       const res = await fetch('api/send', {
         method: 'POST',
@@ -19,13 +18,16 @@ const Contact: NextPage = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: 'なおき',
-          email: 'matsuzaki@rightcode.co.jp',
-          content: 'Test mail.',
+          name: name,
+          email: email,
+          content: content,
+          category: category,
         }),
       })
-      alert('成功しました')
+      alert('送信成功しました')
+      setIsLoading((prevState) => !prevState)
     } catch (error) {
+      setIsLoading((prevState) => !prevState)
       console.error('Fetch error : ', error)
       alert('失敗しました')
     }
@@ -56,7 +58,6 @@ const Contact: NextPage = () => {
               className='p-3 mb-4 w-full h-9 border'
               value={email}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-              onBlur={validEmail}
             />
             <label htmlFor='purpose' className='block'>
               ご用件
@@ -67,9 +68,9 @@ const Contact: NextPage = () => {
               className='mb-4 w-full h-9 border'
               onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setCategory(e.target.value)}
             >
-              <option value='0'>選択してください</option>
-              <option value='1'>お仕事のご依頼</option>
-              <option value='2'>ご相談</option>
+              <option value=''>選択してください</option>
+              <option value='work'>お仕事のご依頼</option>
+              <option value='consultation'>ご相談</option>
             </select>
             <label htmlFor='contents' className='block'>
               内容
@@ -87,7 +88,10 @@ const Contact: NextPage = () => {
               className='block p-2 mx-auto mt-4 bg-[#D3DFC2] rounded border'
               onClick={sendMail}
             >
-              送信する
+              <div className={isLoading ? 'flex justify-center' : 'hidden'}>
+                <div className='w-8 h-8 rounded-full border-2 border-emerald-500 border-t-transparent animate-spin'></div>
+              </div>
+              <div className={isLoading ? 'hidden' : ''}>送信する</div>
             </button>
           </div>
         </div>

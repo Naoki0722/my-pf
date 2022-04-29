@@ -1,17 +1,20 @@
-const send = async (req: any, res: any) => {
-  // const { email, name, content } = req.body
-  // console.log(content)
+import type { NextApiHandler } from 'next'
+
+const send: NextApiHandler = async (req, res) => {
   if (req.method === 'POST') {
     const sgMail = require('@sendgrid/mail')
 
     sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
     const msg = {
-      to: req.body.email,
-      from: 'mattu.nao722@gmail.com',
-      subject: 'お問い合わせありがとうございました',
-      text: `${req.body.name}様。お問合せを受け付けました。回答をお待ちください。${req.body.content}`,
-      html: `${req.body.name}様。お問合せを受け付けました。回答をお待ちください。${req.body.content}`,
+      to: 'mattu.nao722@gmail.com',
+      from: req.body.email,
+      subject: 'お問い合わせがあります。',
+      text: `${req.body.name}様からHPにお問い合わせがありました。お問い合わせ種別：${req.body.category}下記内容を確認ください。${req.body.content}`,
+      html: `${req.body.name}様からHPにお問い合わせがありました。
+            <br>お問い合わせ種別：${req.body.category}
+            <br>下記内容を確認ください。
+            <br>${req.body.content}`,
     }
 
     try {
@@ -26,5 +29,4 @@ const send = async (req: any, res: any) => {
     }
   }
 }
-
 export default send
