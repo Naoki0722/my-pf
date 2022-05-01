@@ -13,8 +13,12 @@ const Header: NextPage = () => {
         <Navigation></Navigation>
       </header>
       <div className='flex justify-end mt-2 mr-8 lg:hidden'>
-        <FontAwesomeIcon icon={faEnvelope} className='mr-4 text-4xl nav-icon' />
-        <FontAwesomeIcon icon={faTwitter} className='text-4xl nav-icon' />
+        <a href='mailto:mattu.nao722@gmail.com'>
+          <FontAwesomeIcon icon={faEnvelope} className='mr-4 text-4xl nav-icon' />
+        </a>
+        <a href='https://twitter.com/mattu_da' target='_blank' rel='noopener noreferrer'>
+          <FontAwesomeIcon icon={faTwitter} className='text-4xl nav-icon' />
+        </a>
       </div>
     </>
   )
