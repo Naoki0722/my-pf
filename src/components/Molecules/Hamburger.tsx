@@ -24,7 +24,7 @@ const Hamburger: NextPage = () => {
       </div>
       <div className={openMenu ? 'hamburger-menu active' : 'hamburger-menu'}>
         <p className='p-4 text-3xl font-bold tracking-[.25em]'>NAOKI MATSUZAKI</p>
-        <nav className='menu'>
+        <nav>
           <h2 className='py-3 text-center border-t border-black'>
             <AnchorLink
               href='#profile'
@@ -70,8 +70,12 @@ const Hamburger: NextPage = () => {
             </AnchorLink>
           </h2>
           <div className='flex justify-center mt-2'>
-            <FontAwesomeIcon icon={faEnvelope} className='mr-4 text-4xl nav-icon' />
-            <FontAwesomeIcon icon={faTwitter} className='text-4xl nav-icon' />
+            <a href='mailto:mattu.nao722@gmail.com'>
+              <FontAwesomeIcon icon={faEnvelope} className='mr-4 text-4xl sp-nav-icon' />
+            </a>
+            <a href='https://twitter.com/mattu_da' target='_blank' rel='noopener noreferrer'>
+              <FontAwesomeIcon icon={faTwitter} className='text-4xl sp-nav-icon' />
+            </a>
           </div>
         </nav>
         <div className='flex justify-center items-end pb-4 mt-8 text-white footer'>

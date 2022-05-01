@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const FirstView: NextPage = () => {
   return (
-    <div className='pt-8 lg:pt-36'>
+    <div id='top' className='pt-8 lg:pt-36'>
       <div className='relative h-[400px] sm:h-[500px] lg:h-[600px] 2xl:h-[800px]'>
         <h2 className='absolute top-[17rem] left-5 z-10 text-3xl leading-relaxed sm:top-[24rem] sm:left-0 sm:leading-normal lg:top-1/3 lg:text-5xl'>
           “地方創生”
