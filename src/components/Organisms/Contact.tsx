@@ -1,36 +1,57 @@
 import { NextPage } from 'next'
+import { SubmitHandler, useForm } from 'react-hook-form'
 import React, { useState } from 'react'
 import HeadingH2 from '../Atoms/HeadingH2'
 
+type FormState = {
+  name: string
+  email: string
+  contents: string
+  category: string
+}
+
 const Contact: NextPage = () => {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [content, setContent] = useState('')
-  const [category, setCategory] = useState('')
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<FormState>({
+    mode: 'onChange',
+    defaultValues: {
+      name: '',
+      email: '',
+      contents: '',
+      category: '',
+    },
+  })
+
   const [isLoading, setIsLoading] = useState(false)
-  const sendMail = async (event: any) => {
-    event.preventDefault()
+  const sendMail: SubmitHandler<FormState> = async (data) => {
     setIsLoading((prevState) => !prevState)
-    try {
-      const res = await fetch('api/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          content: content,
-          category: category,
-        }),
-      })
+    const res = await fetch('api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: data.name,
+        email: data.email,
+        content: data.contents,
+        category: data.category,
+      }),
+    })
+    if (res.ok) {
       alert('送信成功しました')
-      setIsLoading((prevState) => !prevState)
-    } catch (error) {
-      setIsLoading((prevState) => !prevState)
-      console.error('Fetch error : ', error)
+      reset()
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      })
+    } else {
       alert('失敗しました')
     }
+    setIsLoading((prevState) => !prevState)
   }
 
   return (
@@ -38,58 +59,58 @@ const Contact: NextPage = () => {
       <div className='absolute top-7 left-1/2 -translate-x-1/2 sm:top-2'>
         <HeadingH2 title='CONTACT' subTitle='お問い合わせ' />
       </div>
-      <form onSubmit={sendMail}>
+      <form onSubmit={handleSubmit(sendMail)}>
         <div className='flex justify-center mx-auto w-4/5 2xl:w-3/5 contact-bg'>
           <div className='pt-24 pb-8 sm:w-8/12 lg:w-1/2'>
             <label htmlFor='name' className='block'>
               お名前
             </label>
             <input
+              className='p-3 mb-4 w-full h-9 placeholder:text-[#D3DFC2] border border-black'
               type='text'
-              className='p-3 mb-4 w-full h-9 border'
-              value={name}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
+              placeholder='山田 太郎'
+              {...register('name', { required: true })}
             />
+            {errors.name && <span className='text-red-500'>必須項目です</span>}
             <label htmlFor='email' className='block'>
               メールアドレス
             </label>
             <input
+              className='p-3 mb-4 w-full h-9 placeholder:text-[#D3DFC2] border border-black'
               type='email'
-              className='p-3 mb-4 w-full h-9 border'
-              value={email}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+              placeholder='Mail'
+              {...register('email', { required: true })}
             />
-            <label htmlFor='purpose' className='block'>
+            {errors.email && <span className='text-red-500'>必須項目です</span>}
+            <label htmlFor='category' className='block'>
               ご用件
             </label>
             <select
-              name='purpose'
-              id='purpose'
-              className='mb-4 w-full h-9 border'
-              onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setCategory(e.target.value)}
+              id='category'
+              className='mb-4 w-full h-9 placeholder:text-[#D3DFC2] border border-black'
+              {...register('category', { required: true })}
             >
               <option value=''>選択してください</option>
               <option value='work'>お仕事のご依頼</option>
               <option value='consultation'>ご相談</option>
+              <option value='other'>その他</option>
             </select>
+            {errors.category && <span className='text-red-500'>必須項目です</span>}
             <label htmlFor='contents' className='block'>
               内容
             </label>
             <textarea
-              name='contents'
               id='contents'
               cols={30}
               rows={10}
-              className='p-2 w-full border'
-              value={content}
-              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setContent(e.target.value)}
+              className='p-2 w-full placeholder:text-[#D3DFC2] border border-black'
+              placeholder='内容'
+              {...register('contents', { required: true })}
             ></textarea>
-            <button
-              className='block p-2 mx-auto mt-4 bg-[#D3DFC2] rounded border'
-              onClick={sendMail}
-            >
+            {errors.contents && <span className='text-red-500'>必須項目です</span>}
+            <button className='block p-2 mx-auto mt-4 bg-[#D3DFC2] rounded border'>
               <div className={isLoading ? 'flex justify-center' : 'hidden'}>
-                <div className='w-8 h-8 rounded-full border-2 border-emerald-500 border-t-transparent animate-spin'></div>
+                <div className='w-8 h-8 rounded-full border-2 border-emerald-500 border-t-transparent animate-spin' />
               </div>
               <div className={isLoading ? 'hidden' : ''}>送信する</div>
             </button>

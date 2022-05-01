@@ -22,10 +22,7 @@ const send: NextApiHandler = async (req, res) => {
       res.status(200).send('Message sent successfully.')
     } catch (error: any) {
       console.error(error)
-      if (error.response) {
-        console.error(error.response.body)
-        res.status(400).send('Message not sent.')
-      }
+      res.status(400).send('Message not sent.')
     }
   }
 }
