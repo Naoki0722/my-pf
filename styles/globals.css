@@ -89,7 +89,7 @@ a {
 
 .hamburger span {
   display: inline-block;
-  transition: all 0.4s; /*アニメーションの設定*/
+  transition: all 0.3s ease-out; /*アニメーションの設定*/
   position: absolute;
   right: 15px;
   height: 3px;
@@ -115,8 +115,8 @@ a {
 }
 
 .hamburger.active span:nth-of-type(1) {
-  top: 15px;
-  left: 20px;
+  top: 18px;
+  left: 24px;
   transform: translateY(6px) rotate(-45deg);
   width: 45%;
 }
@@ -125,13 +125,13 @@ a {
   opacity: 0; /*真ん中の線は透過*/
 }
 
-.hamburger.active span:nth-of-type(4) {
+.hamburger.active span:nth-of-type(3) {
   opacity: 0; /*真ん中の線は透過*/
 }
 
-.hamburger.active span:nth-of-type(3) {
-  top: 27px;
-  left: 21px;
+.hamburger.active span:nth-of-type(4) {
+  top: 30px;
+  left: 25px;
   transform: translateY(-6px) rotate(45deg);
   width: 45%;
 }
