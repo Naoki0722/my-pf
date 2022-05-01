@@ -6,7 +6,7 @@ type Props = {}
 const NavIcon: React.VFC<Props> = () => {
   return (
     <>
-      <FontAwesomeIcon icon={faEnvelope} className='text-4xl mr-4 nav-icon' />
+      <FontAwesomeIcon icon={faEnvelope} className='mr-4 text-4xl nav-icon' />
       <FontAwesomeIcon icon={faTwitter} className='text-4xl nav-icon' />
     </>
   )

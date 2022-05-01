@@ -23,58 +23,58 @@ const Hamburger: NextPage = () => {
         <span></span>
       </div>
       <div className={openMenu ? 'hamburger-menu active' : 'hamburger-menu'}>
-        <p className='text-3xl font-bold tracking-[.25em] p-4'>NAOKI MATSUZAKI</p>
+        <p className='p-4 text-3xl font-bold tracking-[.25em]'>NAOKI MATSUZAKI</p>
         <nav className='menu'>
-          <h2 className='text-center py-3 border-t border-black'>
+          <h2 className='py-3 text-center border-t border-black'>
             <AnchorLink
               href='#profile'
               offset='50'
               className='flex justify-between items-center mx-4'
               onClick={moveLink}
             >
-              <p className='w-1/2 text-left text-2xl'>ABOUT</p>
-              <p className='text-xs w-5/12 text-left'>プロフィール</p>
+              <p className='w-1/2 text-2xl text-left'>ABOUT</p>
+              <p className='w-5/12 text-xs text-left'>プロフィール</p>
             </AnchorLink>
           </h2>
-          <h2 className='text-center py-3 border-t border-black'>
+          <h2 className='py-3 text-center border-t border-black'>
             <AnchorLink
               href='#history'
               offset='50'
               className='flex justify-between items-center mx-4'
               onClick={moveLink}
             >
-              <p className='w-1/2 text-left text-2xl'>HISTORY</p>
-              <p className='text-xs w-5/12 text-left'>経歴</p>
+              <p className='w-1/2 text-2xl text-left'>HISTORY</p>
+              <p className='w-5/12 text-xs text-left'>経歴</p>
             </AnchorLink>
           </h2>
-          <h2 className='text-center py-3 border-t border-black'>
+          <h2 className='py-3 text-center border-t border-black'>
             <AnchorLink
               href='#skill'
               offset='50'
               className='flex justify-between items-center mx-4'
               onClick={moveLink}
             >
-              <p className='w-1/2 text-left text-2xl'>SKILL</p>
-              <p className='text-xs w-5/12 text-left'>できること</p>
+              <p className='w-1/2 text-2xl text-left'>SKILL</p>
+              <p className='w-5/12 text-xs text-left'>できること</p>
             </AnchorLink>
           </h2>
-          <h2 className='text-center py-3 border-y border-black'>
+          <h2 className='py-3 text-center border-y border-black'>
             <AnchorLink
               href='#contact'
               offset='50'
               className='flex justify-between items-center mx-4'
               onClick={moveLink}
             >
-              <p className='w-1/2 text-left text-2xl'>CONTACT</p>
-              <p className='text-xs w-5/12 text-left'>お問い合わせ</p>
+              <p className='w-1/2 text-2xl text-left'>CONTACT</p>
+              <p className='w-5/12 text-xs text-left'>お問い合わせ</p>
             </AnchorLink>
           </h2>
           <div className='flex justify-center mt-2'>
-            <FontAwesomeIcon icon={faEnvelope} className='text-4xl mr-4 nav-icon' />
+            <FontAwesomeIcon icon={faEnvelope} className='mr-4 text-4xl nav-icon' />
             <FontAwesomeIcon icon={faTwitter} className='text-4xl nav-icon' />
           </div>
         </nav>
-        <div className='footer flex justify-center items-end mt-8 pb-4 text-white'>
+        <div className='flex justify-center items-end pb-4 mt-8 text-white footer'>
           <small>©NAOKI MATSUZAKI</small>
         </div>
       </div>

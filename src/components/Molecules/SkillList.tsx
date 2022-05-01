@@ -11,7 +11,7 @@ const SkillList: NextPage = () => {
   return (
     <div className='relative mb-24'>
       <Category category='Languages' />
-      <div className='flex flex-wrap justify-start bg-white rounded-[4.5rem] sm:rounded-2xl sm:w-11/12 sm:mx-auto'>
+      <div className='flex flex-wrap justify-start bg-white rounded-[4.5rem] sm:mx-auto sm:w-11/12 sm:rounded-2xl'>
         <SkillDetail language='Laravel' icon={faLaravel} width='w-2/5 lg:w-1/4'>
           {`経験年数 2年\n本業、副業含め常に扱っています。0→1からのサービス開発を担当。`}
         </SkillDetail>

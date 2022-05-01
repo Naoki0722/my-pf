@@ -19,13 +19,13 @@ const SkillDetail: VFC<Props> = ({ language, icon, children, width }) => {
       <div className='relative mb-4'>
         <FontAwesomeIcon
           icon={icon}
-          className='text-8xl text-[#D3DFC2] block mx-auto'
+          className='block mx-auto text-8xl text-[#D3DFC2]'
         ></FontAwesomeIcon>
-        <h3 className='font-bold tracking-widest absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+        <h3 className='absolute top-1/2 left-1/2 font-bold tracking-widest -translate-x-1/2 -translate-y-1/2'>
           {language}
         </h3>
       </div>
-      <p className='text-xs sm:text-base lg:text-lg leading-relaxed sm:leading-7'>{texts}</p>
+      <p className='text-xs leading-relaxed sm:text-base sm:leading-7 lg:text-lg'>{texts}</p>
     </div>
   )
 }
