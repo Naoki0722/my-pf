@@ -61,12 +61,12 @@ const Contact: NextPage = () => {
       </div>
       <form onSubmit={handleSubmit(sendMail)}>
         <div className='flex justify-center mx-auto w-4/5 2xl:w-3/5 contact-bg'>
-          <div className='pt-24 pb-8 sm:w-8/12 lg:w-1/2'>
+          <div className='pt-24 pb-8 mx-4 sm:w-8/12 lg:w-1/2'>
             <label htmlFor='name' className='block'>
               お名前
             </label>
             <input
-              className='p-3 mb-4 w-full h-9 placeholder:text-[#D3DFC2] border border-black'
+              className='p-3 mb-4 w-full h-9 placeholder:text-[#D3DFC2] rounded-none border border-black'
               type='text'
               placeholder='山田 太郎'
               {...register('name', { required: true })}
@@ -76,7 +76,7 @@ const Contact: NextPage = () => {
               メールアドレス
             </label>
             <input
-              className='p-3 mb-4 w-full h-9 placeholder:text-[#D3DFC2] border border-black'
+              className='p-3 mb-4 w-full h-9 placeholder:text-[#D3DFC2] rounded-none border border-black'
               type='email'
               placeholder='Mail'
               {...register('email', { required: true })}
@@ -87,7 +87,7 @@ const Contact: NextPage = () => {
             </label>
             <select
               id='category'
-              className='mb-4 w-full h-9 placeholder:text-[#D3DFC2] border border-black'
+              className='mb-4 w-full h-9 placeholder:text-[#D3DFC2] bg-white rounded-none border border-black'
               {...register('category', { required: true })}
             >
               <option value=''>選択してください</option>
@@ -103,7 +103,7 @@ const Contact: NextPage = () => {
               id='contents'
               cols={30}
               rows={10}
-              className='p-2 w-full placeholder:text-[#D3DFC2] border border-black'
+              className='p-2 w-full placeholder:text-[#D3DFC2] rounded-none border border-black'
               placeholder='内容'
               {...register('contents', { required: true })}
             ></textarea>

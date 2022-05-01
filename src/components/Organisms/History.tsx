@@ -125,7 +125,7 @@ const History: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className='absolute top-[8.2rem] left-7 w-12 sm:top-[12.5rem] sm:left-[10rem] lg:top-28 lg:left-0 lg:w-full xl:left-48'>
+      <div className='absolute top-[8.2rem] left-7 w-12 sm:top-[12.5rem] sm:left-[10rem] lg:top-28 lg:left-0 lg:w-[10rem] xl:left-36 2xl:left-52'>
         <Image
           src='/images/history-logo.png'
           alt='history-logo'
