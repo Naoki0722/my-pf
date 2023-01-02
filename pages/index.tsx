@@ -26,8 +26,8 @@ const Home: NextPage = () => {
       <History></History>
       <Skill></Skill>
       {/* 下記はまだ実装しないためコメントアウトしておく */}
-      {/* <Project></Project>
-      <Report></Report> */}
+      <Project></Project>
+      {/* <Report></Report> */}
       <Contact></Contact>
       <Footer></Footer>
     </>

@@ -4,13 +4,16 @@ import Navigation from '../Molecules/Navigation'
 import { FontAwesomeIcon } from '　'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { useRouter } from 'next/router'
 
 const Header: NextPage = () => {
+  const router = useRouter()
+
   return (
     <>
       <header className='flex justify-center items-end pt-8 mx-4 border-b-2 border-gray-500 sm:justify-between sm:pb-2 sm:mx-8 lg:mx-24'>
         <SiteTitle></SiteTitle>
-        <Navigation></Navigation>
+        {router.pathname === '/projects' ? null : <Navigation />}
       </header>
       <div className='flex justify-end mt-2 mr-8 lg:hidden'>
         <a href='mailto:mattu.nao722@gmail.com'>
