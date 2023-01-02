@@ -4,6 +4,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { FontAwesomeIcon } from '　'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import Link from 'next/link'
 
 const Hamburger: NextPage = () => {
   const [openMenu, setOpenMenu] = useState(false)
@@ -37,15 +38,12 @@ const Hamburger: NextPage = () => {
             </AnchorLink>
           </h2>
           <h2 className='py-3 text-center border-t border-black'>
-            <AnchorLink
-              href='#history'
-              offset='50'
-              className='flex justify-between items-center mx-4'
-              onClick={moveLink}
-            >
-              <p className='w-1/2 text-2xl text-left'>HISTORY</p>
-              <p className='w-5/12 text-xs text-left'>経歴</p>
-            </AnchorLink>
+            <Link href='/projects'>
+              <div className='flex justify-between items-center mx-4' onClick={moveLink}>
+                <p className='w-1/2 text-2xl text-left'>WORKS</p>
+                <p className='w-5/12 text-xs text-left'>プロジェクト履歴</p>
+              </div>
+            </Link>
           </h2>
           <h2 className='py-3 text-center border-t border-black'>
             <AnchorLink
