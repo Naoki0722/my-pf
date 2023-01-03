@@ -7,6 +7,7 @@ import ProjectCard from '@/components/Organisms/ProjectCard'
 import { Project } from '@prisma/client'
 import Contact from '@/components/Organisms/Contact'
 import Footer from '@/components/Organisms/Footer'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 export default function Projects() {
   const [projects, setProjects] = useState<Project[]>()
@@ -28,7 +29,9 @@ export default function Projects() {
       </div>
       <div id='top' className='pt-40 pb-24 tracking-widest text-center'>
         <h2 className='mb-8 text-4xl'>プロジェクト履歴</h2>
-        <p className='inline-block py-2 px-4 border'>お問い合わせはこちら</p>
+        <AnchorLink href='#contact' offset='50'>
+          <p className='inline-block py-2 px-4 border'>お問い合わせはこちら</p>
+        </AnchorLink>
       </div>
       {projects?.map((project, index) => (
         <ProjectCard key={index} project={project} />
